@@ -1,0 +1,25 @@
+<h1>Sigh up</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= render 'error_messages', model: f.object %>
+  <ul>
+    <li><%= f.label :name, 'Name' %></li>
+    <li><%= f.text_field :name %></li>
+  </ul>
+  
+  <ul>
+    <li><%= f.label :email, 'Email' %></li>
+    <li><%= f.email_field :email %></li>
+  </ul>
+  
+  <ul>
+    <li><%= f.label :password, 'Password' %></li>
+    <li><%= f.password_field :password %></li>
+  </ul>
+  
+  <ul>
+    <li><%= f.label :password_confirmation, 'Confirmation' %></li>
+    <li><%= f.password_field :password_confirmation %></li>
+  </ul>
+  
+  <%= f.submit 'Sign up' %>
+<% end %>
