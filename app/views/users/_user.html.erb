@@ -1,6 +1,0 @@
-<% if users.any? %>
-  <% users.each do |user| %>
-    <p><%= user.name %></p>
-  <% end %>
-  <p><%= link_to 'View Profile', user_path(user) %></p>
-<% end %>

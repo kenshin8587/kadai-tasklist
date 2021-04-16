@@ -1,6 +1,6 @@
 <h1>Sigh up</h1>
 <%= form_with(model: @user, local: true) do |f| %>
-  <%= render 'error_messages', model: f.object %>
+  <%= render 'layouts/error_messages', model: f.object %>
   <ul>
     <li><%= f.label :name, 'Name' %></li>
     <li><%= f.text_field :name %></li>

@@ -1,2 +1,11 @@
 <h1>Tasklist</h1>
-<p><a href="#">Login</a></p>
+<% if logged_in? %>
+  <%= link_to 'User', users_path %>
+  <%= link_to 'My profile', user_path(current_user) %>
+  <%= link_to 'log out', logout_path, method: :delete %>
+<% else %>
+  <span>
+    <p><%= link_to 'Sign up', signup_path %></p>
+    <p><%= link_to 'Log in', login_path %></p>
+  </span>
+<% end %>
