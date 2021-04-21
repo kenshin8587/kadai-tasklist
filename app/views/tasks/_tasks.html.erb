@@ -1,0 +1,8 @@
+<% tasks.each do |task| %>
+  <%= task.status %> &gt; <%= task.content %> 
+  <% if current_user == task.user %>
+    <%= link_to '新規投稿', new_task_path %>
+    <%= link_to '編集', edit_task_path(task) %>
+    <%= link_to '削除', task_path(task), method: :delete, data: { confirm: "You sure?" } %>
+  <% end %>
+<% end %>
